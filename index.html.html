@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sohail Sina Surgical Speciality Hospital - Takhar</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800&display=swap');
+    [dir="rtl"] { font-family: 'Vazirmatn', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- TOP EMERGENCY BAR & LANGUAGE SWITCHER -->
+  <div class="bg-blue-950 text-white text-xs md:text-sm py-2.5 px-6">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
+      <div class="flex flex-wrap items-center space-x-4 rtl:space-x-reverse">
+        <span class="font-semibold text-amber-400"><i class="fa-solid fa-phone me-1"></i> +93 748 487 878 / +93 787 020 742</span>
+        <span class="hidden md:inline"><i class="fa-solid fa-location-dot me-1 text-blue-300"></i> <span data-key="top_address">Company Street, Opposite Takhar Provincial Hospital</span></span>
+      </div>
+      <!-- Language Buttons -->
+      <div class="flex items-center space-x-2 rtl:space-x-reverse font-bold text-xs">
+        <button onclick="setLanguage('en')" id="btn-en" class="px-2.5 py-1 bg-blue-700 rounded hover:bg-blue-600 transition">English</button>
+        <button onclick="setLanguage('fa')" id="btn-fa" class="px-2.5 py-1 bg-blue-900 rounded hover:bg-blue-600 transition">فارسی</button>
+        <button onclick="setLanguage('ps')" id="btn-ps" class="px-2.5 py-1 bg-blue-900 rounded hover:bg-blue-600 transition">پښتو</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-24 items-center">
+        <!-- Hospital Name & Brand -->
+        <div class="flex items-center space-x-3 rtl:space-x-reverse">
+          <div class="w-14 h-14 bg-blue-900 rounded-xl flex items-center justify-center text-white text-2xl shadow-md border-2 border-amber-400">
+            <i class="fa-solid fa-hospital-user"></i>
+          </div>
+          <div>
+            <span class="text-xl md:text-2xl font-black text-blue-950 block leading-tight" data-key="hosp_name">Sohail Sina Surgical Speciality Hospital</span>
+            <span class="text-xs md:text-sm font-semibold text-blue-600" data-key="sub_title">Abu Ali Sina Speciality Hospital - Takhar</span>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="hidden md:flex space-x-6 rtl:space-x-reverse font-semibold text-slate-700">
+          <a href="#home" class="hover:text-blue-600 transition" data-key="nav_home">Home</a>
+          <a href="#gallery" class="hover:text-blue-600 transition" data-key="nav_gallery">Gallery</a>
+          <a href="#services" class="hover:text-blue-600 transition" data-key="nav_services">Departments</a>
+          <a href="#doctors" class="hover:text-blue-600 transition" data-key="nav_doctors">Doctors</a>
+          <a href="#contact" class="hover:text-blue-600 transition" data-key="nav_contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="relative bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-16 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="bg-amber-500/30 text-amber-300 text-xs md:text-sm font-bold px-3.5 py-1.5 rounded-full uppercase tracking-wider" data-key="badge_hero">Takhar's Premier Speciality Center</span>
+        <h1 class="text-3xl lg:text-5xl font-black mt-4 leading-tight" data-key="hero_title">Sohail Sina Surgical Speciality Hospital</h1>
+        <p class="mt-4 text-blue-100 text-base md:text-lg" data-key="hero_desc">24/7 active emergency services, specialized neurosurgery, pediatric surgery, general internal medicine, and advanced MRI/Ultrasound imaging in Takhar Province.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-slate-900 font-extrabold px-6 py-3 rounded-lg transition shadow-lg" data-key="btn_contact">Contact Hospital</a>
+          <a href="tel:+93748487878" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded-lg transition shadow-lg" data-key="btn_call">Emergency Call</a>
+        </div>
+      </div>
+
+      <!-- Main Hospital Building Photo Card -->
+      <div class="relative group">
+        <div class="overflow-hidden rounded-2xl shadow-2xl border-4 border-amber-400/40 bg-slate-900">
+          <img src="hospital.jpg_2.jpeg" alt="Sohail Sina Surgical Hospital Building" class="w-full h-80 md:h-[380px] object-cover object-center group-hover:scale-105 transition duration-500">
+          <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-blue-950 via-blue-950/80 to-transparent p-5">
+            <span class="text-amber-400 text-xs font-bold uppercase tracking-wider block" data-key="building_tag">Main Hospital Exterior</span>
+            <h3 class="text-lg font-extrabold text-white" data-key="hosp_name">Sohail Sina Surgical Speciality Hospital</h3>
+            <p class="text-xs text-blue-200 mt-0.5"><i class="fa-solid fa-location-dot me-1 text-amber-400"></i> <span data-key="top_address">Company Street, Opposite Takhar Provincial Hospital</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 24/7 SERVICES HIGHLIGHT CARDS -->
+  <section class="max-w-7xl mx-auto px-6 -mt-8 relative z-10 grid md:grid-cols-4 gap-4">
+    <div class="bg-white p-5 rounded-xl shadow-xl border-t-4 border-red-600 flex items-start space-x-3 rtl:space-x-reverse">
+      <i class="fa-solid fa-truck-medical text-red-600 text-3xl"></i>
+      <div>
+        <h4 class="font-bold text-slate-800" data-key="f1_title">24/7 Emergency Ward</h4>
+        <p class="text-slate-600 text-xs mt-1" data-key="f1_desc">Round-the-clock emergency trauma response & acute surgical care.</p>
+      </div>
+    </div>
+    <div class="bg-white p-5 rounded-xl shadow-xl border-t-4 border-blue-600 flex items-start space-x-3 rtl:space-x-reverse">
+      <i class="fa-solid fa-bed-pulse text-blue-600 text-3xl"></i>
+      <div>
+        <h4 class="font-bold text-slate-800" data-key="f2_title">Equipped ICU Beds</h4>
+        <p class="text-slate-600 text-xs mt-1" data-key="f2_desc">Dedicated intensive care unit, general surgical & pediatric recovery beds.</p>
+      </div>
+    </div>
+    <div class="bg-white p-5 rounded-xl shadow-xl border-t-4 border-green-600 flex items-start space-x-3 rtl:space-x-reverse">
+      <i class="fa-solid fa-microscope text-green-600 text-3xl"></i>
+      <div>
+        <h4 class="font-bold text-slate-800" data-key="f3_title">Diagnostic Imaging</h4>
+        <p class="text-slate-600 text-xs mt-1" data-key="f3_desc">MRI, Color Ultrasound, Digital X-Ray, ECG, EEG & Laboratory.</p>
+      </div>
+    </div>
+    <div class="bg-white p-5 rounded-xl shadow-xl border-t-4 border-amber-500 flex items-start space-x-3 rtl:space-x-reverse">
+      <i class="fa-solid fa-pills text-amber-500 text-3xl"></i>
+      <div>
+        <h4 class="font-bold text-slate-800" data-key="f4_title">24/7 Pharmacy</h4>
+        <p class="text-slate-600 text-xs mt-1" data-key="f4_desc">Fully stocked hospital pharmacy operational 24 hours daily.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery" class="py-16 max-w-7xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-extrabold text-blue-950" data-key="gal_title">Hospital Facilities & Operations</h2>
+      <p class="text-slate-600 mt-2" data-key="gal_desc">Take a look inside our surgical theaters, ICU, diagnostic labs, and hospital building.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+      <!-- Main Hospital Image Card -->
+      <div class="bg-white rounded-xl shadow-md overflow-hidden border border-amber-300">
+        <img src="hospital.jpg_2.jpeg" alt="Hospital Building Exterior" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-bold text-slate-800" data-key="img0_t">Hospital Main Building</h4>
+          <p class="text-xs text-slate-500 mt-1" data-key="img0_d">Modern facility located opposite Takhar Provincial Hospital.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md overflow-hidden border">
+        <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=600&q=80" alt="Surgical Operating Room" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-bold text-slate-800" data-key="img1_t">Surgical Operating Theater</h4>
+          <p class="text-xs text-slate-500 mt-1" data-key="img1_d">Equipped for general, pediatric, and neurosurgery procedures.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md overflow-hidden border">
+        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" alt="Intensive Care Unit ICU" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-bold text-slate-800" data-key="img2_t">ICU & Recovery Beds</h4>
+          <p class="text-xs text-slate-500 mt-1" data-key="img2_d">24/7 critical care monitoring for post-surgery patients.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md overflow-hidden border">
+        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=600&q=80" alt="Medical Diagnostics Ultrasound" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-bold text-slate-800" data-key="img3_t">Ultrasound & MRI Center</h4>
+          <p class="text-xs text-slate-500 mt-1" data-key="img3_d">High precision color Doppler ultrasound and MRI scanning.</p>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md overflow-hidden border">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=600&q=80" alt="24/7 Hospital Pharmacy" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h4 class="font-bold text-slate-800" data-key="img4_t">24/7 Pharmacy & Lab</h4>
+          <p class="text-xs text-slate-500 mt-1" data-key="img4_d">Round-the-clock clinical testing and medication supply.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALIZED DEPARTMENTS -->
+  <section id="services" class="py-16 bg-slate-100 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-blue-950" data-key="dept_header">Medical & Surgical Departments</h2>
+        <p class="text-slate-600 mt-2" data-key="dept_subheader">Comprehensive medical divisions extracted directly from our medical catalogue.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Surgical Department -->
+        <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-900">
+          <div class="w-12 h-12 bg-blue-100 text-blue-900 rounded-lg flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-user-nurse"></i>
+          </div>
+          <h3 class="text-xl font-bold text-blue-950 mb-3" data-key="surg_title">Surgical Department (بخش جراحی)</h3>
+          <ul class="text-slate-700 text-sm space-y-2 list-disc list-inside">
+            <li data-key="surg_1">Brain, Spine & Neurosurgery</li>
+            <li data-key="surg_2">Pediatric Surgery</li>
+            <li data-key="surg_3">General Surgery</li>
+            <li data-key="surg_4">Urology Surgery</li>
+            <li data-key="surg_5">Orthopedic Surgery</li>
+            <li data-key="surg_6">Ear, Nose & Throat (ENT)</li>
+            <li data-key="surg_7">Obstetrics & Gynecology</li>
+          </ul>
+        </div>
+
+        <!-- Internal Medicine -->
+        <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-indigo-600">
+          <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+          <h3 class="text-xl font-bold text-blue-950 mb-3" data-key="internal_title">Internal Medicine (بخش داخله)</h3>
+          <ul class="text-slate-700 text-sm space-y-2 list-disc list-inside">
+            <li data-key="int_1">General Internal Medicine</li>
+            <li data-key="int_2">Cardiac, Respiratory & Gastrointestinal Care</li>
+            <li data-key="int_3">Pediatric & Infant Internal Medicine</li>
+            <li data-key="int_4">Neurology & Neuropsychiatry</li>
+          </ul>
+        </div>
+
+        <!-- Diagnostic & Labs -->
+        <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-600">
+          <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-x-ray"></i>
+          </div>
+          <h3 class="text-xl font-bold text-blue-950 mb-3" data-key="diag_title">Diagnostics Center (بخش تشخیصیه)</h3>
+          <ul class="text-slate-700 text-sm space-y-2 list-disc list-inside">
+            <li data-key="diag_1">MRI Scanning</li>
+            <li data-key="diag_2">Color Doppler Ultrasound</li>
+            <li data-key="diag_3">Digital X-Ray</li>
+            <li data-key="diag_4">Electrocardiogram (ECG - گراف قلب)</li>
+            <li data-key="diag_5">Electroencephalogram (EEG - گراف سر)</li>
+            <li data-key="diag_6">24/7 Fully Equipped Medical Laboratory</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENERAL MANAGER & DOCTOR SECTION -->
+  <section id="doctors" class="py-16 max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-extrabold text-blue-950" data-key="doc_header">Hospital Leadership & Specialists</h2>
+      <p class="text-slate-600 mt-2" data-key="doc_subheader">Our leadership team and expert medical specialists.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- GM Card -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-slate-100 text-center">
+        <div class="w-24 h-24 bg-blue-100 text-blue-900 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 border-4 border-amber-400">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <h3 class="text-2xl font-extrabold text-slate-900">SAYED HAFIZULLAH FATEH</h3>
+        <p class="text-amber-600 font-bold text-sm mt-1" data-key="gm_title">GENERAL MANAGER</p>
+        <p class="text-slate-600 text-xs mt-3 leading-relaxed" data-key="gm_desc">Overseeing operations, emergency preparedness, and general administration at Sohail Sina Speciality Hospital Takhar.</p>
+        <div class="mt-6 pt-4 border-t flex justify-center items-center space-x-2 text-slate-700 text-sm font-semibold">
+          <i class="fa-solid fa-phone text-blue-600"></i>
+          <span>+93748487878 / +93787020742</span>
+        </div>
+      </div>
+
+      <!-- Doctor Card -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg border-2 border-slate-100 text-center">
+        <div class="w-24 h-24 bg-blue-100 text-blue-900 rounded-full flex items-center justify-center text-4xl mx-auto mb-4 border-4 border-amber-400">
+          <i class="fa-solid fa-user-doctor"></i>
+        </div>
+        <h3 class="text-2xl font-extrabold text-slate-900">Dr. Nejattuddin "Noori"</h3>
+        <p class="text-blue-700 font-bold text-sm mt-1">Pediatric Surgeon Specialist (MD, PGD)</p>
+        <p class="text-slate-600 text-xs mt-3 leading-relaxed" data-key="doc_desc">Specialized in pediatric and infant surgical care, pediatric trauma, and general surgery at Sohail Sina Speciality Hospital Takhar.</p>
+        <div class="mt-6 pt-4 border-t flex justify-center items-center space-x-2 text-slate-700 text-sm font-semibold">
+          <i class="fa-solid fa-phone text-blue-600"></i>
+          <span>Direct Contact: +93778771890</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER & CONTACT INFO -->
+  <footer id="contact" class="bg-blue-950 text-slate-300 py-12 px-6">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 pb-8 border-b border-blue-900">
+      <div>
+        <h3 class="text-white font-black text-xl mb-3" data-key="hosp_name">Sohail Sina Surgical Speciality Hospital</h3>
+        <p class="text-xs text-slate-400 leading-relaxed" data-key="footer_about">Serving Takhar Province with world-class surgical care, diagnostic excellence, and 24/7 emergency medical response.</p>
+        <p class="mt-4 text-xs text-amber-400 font-semibold"><strong>General Manager:</strong> Sayed Hafizullah Fateh</p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold text-base mb-3" data-key="foot_contact">Contact Information</h4>
+        <p class="text-xs mb-2"><i class="fa-solid fa-location-dot me-2 text-amber-400"></i> <span data-key="top_address">Company Street, Opposite Takhar Provincial Hospital</span></p>
+        <p class="text-xs mb-1"><i class="fa-solid fa-phone me-2 text-amber-400"></i> +93 748 487 878</p>
+        <p class="text-xs mb-1"><i class="fa-solid fa-phone me-2 text-amber-400"></i> +93 787 020 742</p>
+        <p class="text-xs mb-1"><i class="fa-solid fa-phone me-2 text-amber-400"></i> +93 778 771 890</p>
+        <p class="text-xs mt-2"><i class="fa-solid fa-envelope me-2 text-amber-400"></i> hello@reallygreatsite.com</p>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold text-base mb-3" data-key="foot_hours">Hours & Service</h4>
+        <p class="text-xs mb-1" data-key="h_emerg">Emergency Trauma: <span class="text-amber-400 font-bold">24 Hours / 7 Days</span></p>
+        <p class="text-xs mb-1" data-key="h_pharm">Pharmacy & Lab: <span class="text-amber-400 font-bold">24 Hours Active</span></p>
+        <p class="text-xs" data-key="h_opd">OPD Consultations: <span class="text-amber-400 font-bold">Daily Schedule</span></p>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-6 text-center text-xs text-slate-500">
+      &copy; 2026 Sohail Sina Surgical Speciality Hospital - Takhar. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- MULTI-LANGUAGE SCRIPT -->
+  <script>
+    const translations = {
+      en: {
+        top_address: "Company Street, Opposite Takhar Provincial Hospital",
+        hosp_name: "Sohail Sina Surgical Speciality Hospital",
+        sub_title: "Abu Ali Sina Speciality Hospital - Takhar",
+        nav_home: "Home",
+        nav_gallery: "Gallery",
+        nav_services: "Departments",
+        nav_doctors: "Doctors",
+        nav_contact: "Contact",
+        badge_hero: "Takhar's Premier Speciality Center",
+        hero_title: "Sohail Sina Surgical Speciality Hospital",
+        hero_desc: "24/7 active emergency services, specialized neurosurgery, pediatric surgery, general internal medicine, and advanced MRI/Ultrasound imaging in Takhar Province.",
+        btn_contact: "Contact Hospital",
+        btn_call: "Emergency Call",
+        building_tag: "Main Hospital Exterior",
+        gm_title: "GENERAL MANAGER",
+        gm_desc: "Overseeing operations, emergency preparedness, and general administration at Sohail Sina Speciality Hospital Takhar.",
+        f1_title: "24/7 Emergency Ward",
+        f1_desc: "Round-the-clock emergency trauma response & acute surgical care.",
+        f2_title: "Equipped ICU Beds",
+        f2_desc: "Dedicated intensive care unit, general surgical & pediatric recovery beds.",
+        f3_title: "Diagnostic Imaging",
+        f3_desc: "MRI, Color Ultrasound, Digital X-Ray, ECG, EEG & Laboratory.",
+        f4_title: "24/7 Pharmacy",
+        f4_desc: "Fully stocked hospital pharmacy operational 24 hours daily.",
+        gal_title: "Hospital Facilities & Operations",
+        gal_desc: "Take a look inside our surgical theaters, ICU, diagnostic labs, and hospital building.",
+        img0_t: "Hospital Main Building",
+        img0_d: "Modern facility located opposite Takhar Provincial Hospital.",
+        img1_t: "Surgical Operating Theater",
+        img1_d: "Equipped for general, pediatric, and neurosurgery procedures.",
+        img2_t: "ICU & Recovery Beds",
+        img2_d: "24/7 critical care monitoring for post-surgery patients.",
+        img3_t: "Ultrasound & MRI Center",
+        img3_d: "High precision color Doppler ultrasound and MRI scanning.",
+        img4_t: "24/7 Pharmacy & Lab",
+        img4_d: "Round-the-clock clinical testing and medication supply.",
+        dept_header: "Medical & Surgical Departments",
+        dept_subheader: "Comprehensive medical divisions extracted directly from our medical catalogue.",
+        surg_title: "Surgical Department",
+        surg_1: "Brain, Spine & Neurosurgery",
+        surg_2: "Pediatric Surgery",
+        surg_3: "General Surgery",
+        surg_4: "Urology Surgery",
+        surg_5: "Orthopedic Surgery",
+        surg_6: "Ear, Nose & Throat (ENT)",
+        surg_7: "Obstetrics & Gynecology",
+        internal_title: "Internal Medicine",
+        int_1: "General Internal Medicine",
+        int_2: "Cardiac, Respiratory & Gastrointestinal Care",
+        int_3: "Pediatric & Infant Internal Medicine",
+        int_4: "Neurology & Neuropsychiatry",
+        diag_title: "Diagnostics Center",
+        diag_1: "MRI Scanning",
+        diag_2: "Color Ultrasound",
+        diag_3: "Digital X-Ray",
+        diag_4: "ECG (Heart Graphic)",
+        diag_5: "EEG (Brain Graphic)",
+        diag_6: "24/7 Medical Laboratory",
+        doc_header: "Hospital Leadership & Specialists",
+        doc_subheader: "Our leadership team and expert medical specialists.",
+        doc_desc: "Specialized in pediatric and infant surgical care, pediatric trauma, and general surgery at Sohail Sina Speciality Hospital Takhar.",
+        foot_contact: "Contact Information",
+        foot_hours: "Hours & Service",
+        footer_about: "Serving Takhar Province with world-class surgical care, diagnostic excellence, and 24/7 emergency medical response.",
+        h_emerg: "Emergency Trauma: 24 Hours / 7 Days",
+        h_pharm: "Pharmacy & Lab: 24 Hours Active",
+        h_opd: "OPD Consultations: Daily Schedule"
+      },
+      fa: {
+        top_address: "سرک شرکت، مقابل شفاخانه ولایتی تخار",
+        hosp_name: "شفاخانه اختصاصی جراحی سهیل سینا",
+        sub_title: "شفاخانه اختصاصی بوعلی سینا - تخار",
+        nav_home: "صفحه اصلی",
+        nav_gallery: "تصاویر شفاخانه",
+        nav_services: "بخش‌های طبی",
+        nav_doctors: "داکتران",
+        nav_contact: "تماس با ما",
+        badge_hero: "مرکز تخصصی جراحی در ولایت تخار",
+        hero_title: "شفاخانه اختصاصی جراحی سهیل سینا",
+        hero_desc: "ارائه خدمات عاجل ۲۴ ساعته، عملیات‌های جراحی اعصاب و اطفال، داخلـه عمومی و معاینات مدرن ام‌ارآی و التراسوند در تخار.",
+        btn_contact: "تماس با شفاخانه",
+        btn_call: "تماس با بخش عاجل",
+        building_tag: "نمای بیرونی شفاخانه",
+        gm_title: "مدیر عمومی",
+        gm_desc: "مدیریت عمومی، تنظیم خدمات ۲۴ ساعته و امور اداری شفاخانه تخصصی سهیل سینا.",
+        f1_title: "بخش عاجل ۲۴ ساعته",
+        f1_desc: "خدمات فوری جراحی و عاجل بصورت ۲۴ ساعته.",
+        f2_title: "بستر‌های ICU مجهز",
+        f2_desc: "بخش مراقبت‌های ویژه، بستر‌های جراحی عمومی و اطفال.",
+        f3_title: "معاینات و عکسبرداری",
+        f3_desc: "ام آر آی، التراسوند، ایکس‌ری، گراف قلب، گراف سر و لابراتوار.",
+        f4_title: "دواخانه ۲۴ ساعته",
+        f4_desc: "دواخانه مجهز شفاخانه بصورت شبانه‌روزی.",
+        gal_title: "گالری و تجهیزات شفاخانه",
+        gal_desc: "نگاهی به ساختمان شفاخانه، اتاق‌های عملیات، بخش ICU و دستگاه‌های تشخیصیه.",
+        img0_t: "بنای اصلی شفاخانه",
+        img0_d: "مرکز مجهز طبی واقع در سرک شرکت، مقابل شفاخانه ولایتی تخار.",
+        img1_t: "اتاق عملیات جراحی",
+        img1_d: "مجهز برای جراحی‌های عمومی، اطفال و اعصاب.",
+        img2_t: "بستر‌های ICU و مراقبت ویژه",
+        img2_d: "مراقبت‌های بعد از عملیات بصورت ۲۴ ساعته.",
+        img3_t: "بخش التراسوند و ام‌ارآی",
+        img3_d: "دستگاه‌های مدرن عکسبرداری و معاینات تلویزیونی.",
+        img4_t: "دواخانه و لابراتوار ۲۴ ساعته",
+        img4_d: "ارائه ادویه و آزمایشات طبی شبانه‌روزی.",
+        dept_header: "بخش‌های تخصصی و طبی",
+        dept_subheader: "لیست کامل خدمات جراحی و داخلـه بر اساس بروشور رسمی شفاخانه.",
+        surg_title: "بخش جراحی",
+        surg_1: "جراحی مغز، اعصاب و ستون فقرات",
+        surg_2: "جراحی اطفال و نوزادان",
+        surg_3: "جراحی عمومی",
+        surg_4: "جراحی یورولوژی",
+        surg_5: "جراحی اورتوپدی",
+        surg_6: "جراحی گوش و گلو",
+        surg_7: "بخش نسایی ولادی",
+        internal_title: "بخش داخله",
+        int_1: "داخله عمومی",
+        int_2: "قلبی، تنفسی و هضمی",
+        int_3: "داخله اطفال و نوزادان",
+        int_4: "داخله عقلی و عصبی",
+        diag_title: "بخش تشخیصیه",
+        diag_1: "ام.آر.آی (MRI)",
+        diag_2: "معاینه تلویزیونی (Ultrasound)",
+        diag_3: "دیجیتال ایکس‌ری (X-Ray)",
+        diag_4: "گراف قلب (ECG)",
+        diag_5: "گراف سر (EEG)",
+        diag_6: "لابراتوار مجهز ۲۴ ساعته",
+        doc_header: "مدیریت و داکتران متخصص",
+        doc_subheader: "تیم رهبری و متخصصین مجرب شفاخانه سهیل سینا.",
+        doc_desc: "متخصص جراحی اطفال و نوزادان (MD, PGD) با تجربه کاری عالی در بخش جراحی اطفال.",
+        foot_contact: "اطلاعات تماس",
+        foot_hours: "ساعات کاری",
+        footer_about: "خدمتگزار مردم شریف تخار در بخش‌های جراحی، داخله و تشخیصیه مدرن.",
+        h_emerg: "بخش عاجل: ۲۴ ساعته / ۷ روز هفته",
+        h_pharm: "دواخانه و لابراتوار: ۲۴ ساعته",
+        h_opd: "معاینات روزانه: فعال"
+      },
+      ps: {
+        top_address: "د شرکت سرک، د تخار ولایتي روغتون بالمقابل",
+        hosp_name: "د سهیل سینا اختصاصي جراحي روغتون",
+        sub_title: "د بوعلي سینا اختصاصي روغتون - تخار",
+        nav_home: "اصلي صفحه",
+        nav_gallery: "انځورونه",
+        nav_services: "طبي څانګې",
+        nav_doctors: "ډاکټران",
+        nav_contact: "اړیکه",
+        badge_hero: "په تخار کې د جراحۍ متخصصه کچه",
+        hero_title: "د سهیل سینا اختصاصي جراحي روغتون",
+        hero_desc: "۲۴ ساعته عاجل خدمات، پرمختللي جراحي عملیاتونه، عصري تشخیصیه او د داخله ناروغیو درملنه.",
+        btn_contact: "ارتباط",
+        btn_call: "عاجل اړیکه",
+        building_tag: "د روغتون بهرنۍ ودانۍ",
+        gm_title: "عمومي مدیر",
+        gm_desc: "د روغتون عمومي مدیریت او د ۲۴ ساعته خدماتو تنظیمول.",
+        f1_title: "۲۴ ساعته عاجل بخش",
+        f1_desc: "فعاله عاجله برخه د ۲۴ ساعته چمتووالي سره.",
+        f2_title: "مجهز ICU بستره",
+        f2_desc: "د جراحۍ، داخله او ماشومانو لپاره پرمختللي بستره.",
+        f3_title: "تشخیص او ازموینې",
+        f3_desc: "MRI، التراساونډ، ایکس رې، د زړه او سر ګراف، مجهز لابراتوار.",
+        f4_title: "۲۴ ساعته درملتون",
+        f4_desc: "د روغتون مجهز درملتون ۲۴ ساعته فعال دی.",
+        gal_title: "د روغتون اسانتیاوې",
+        gal_desc: "د روغتون د ودانۍ، عملیات خونې، مراقبت او تشخیصیه تجهیزاتو انځورونه.",
+        img0_t: "د روغتون اصلي ودانۍ",
+        img0_d: "د شرکت په سرک کې موقعیت لري، د ولایتي روغتون بالمقابل.",
+        img1_t: "د جراحي عملیات خانه",
+        img1_d: "د عمومي، اعصابو او ماشومانو جراحۍ لپاره مجهز.",
+        img2_t: "د ICU عاجلې بسترې",
+        img2_d: "د جراحۍ وروسته ۲۴ ساعته مراقبت.",
+        img3_t: "د ام‌ارآی او التراساونډ برخه",
+        img3_d: "پرمختللي معاینات او انځور اخیستنه.",
+        img4_t: "۲۴ ساعته درملتون او لابراتوار",
+        img4_d: "شپې او ورځې طبي ازموینې او درمل.",
+        dept_header: "زموږ تخصصي څانګې",
+        dept_subheader: "تر یوه چت لاندې د معياري طبي او جراحي خدماتو وړاندې کول.",
+        surg_title: "د جراحۍ څانګه",
+        surg_1: "د مغز، اعصابو او د ملا تیر جراحي",
+        surg_2: "د ماشومانو او نویو زیږیدلو جراحي",
+        surg_3: "عمومي جراحي",
+        surg_4: "یورولوژي جراحي",
+        surg_5: "اورتوپدي جراحي",
+        surg_6: "د غوږ او ستوني جراحي",
+        surg_7: "د نسایي ولادي څانګه",
+        internal_title: "د داخله څانګه",
+        int_1: "عمومي داخله",
+        int_2: "زړه، تنفسي او هضمي ناروغۍ",
+        int_3: "د ماشومانو او نویو زیږیدلو داخله",
+        int_4: "عصبي او رواني ناروغۍ",
+        diag_title: "تشخیصیوي برخه",
+        diag_1: "ام آر آی (MRI)",
+        diag_2: "تلویزیوني معاینه (Ultrasound)",
+        diag_3: "دیجیټل ایکس رې (X-Ray)",
+        diag_4: "د زړه ګراف (ECG)",
+        diag_5: "د سر ګراف (EEG)",
+        diag_6: "۲۴ ساعته مجهز لابراتوار",
+        doc_header: "مدیریت او متخصص ډاکټران",
+        doc_subheader: "زموږ تجربه لرونکي متخصصین او جراحان.",
+        doc_desc: "د ماشومانو او نویو زیږیدلو جراحۍ متخصص (MD, PGD).",
+        foot_contact: "د اړیکې معلومات",
+        foot_hours: "کاري ساعتونه",
+        footer_about: "په تخار ولایت کې د جراحي، داخله او تشخیصي برخو کې ستاسو خدمتګار.",
+        h_emerg: "عاجله برخه: ۲۴ ساعته / ۷ ورځې",
+        h_pharm: "درملتون او لابراتوار: ۲۴ ساعته",
+        h_opd: "ورځنۍ معاینات: فعال"
+      }
+    };
+
+    function setLanguage(lang) {
+      const htmlEl = document.documentElement;
+      if (lang === 'fa' || lang === 'ps') {
+        htmlEl.setAttribute('dir', 'rtl');
+        htmlEl.setAttribute('lang', lang);
+      } else {
+        htmlEl.setAttribute('dir', 'ltr');
+        htmlEl.setAttribute('lang', 'en');
+      }
+
+      document.querySelectorAll('[data-key]').forEach(elem => {
+        const key = elem.getAttribute('data-key');
+        if (translations[lang] && translations[lang][key]) {
+          elem.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    setLanguage('en');
+  </script>
+</body>
+</html>
